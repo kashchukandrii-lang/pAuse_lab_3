@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="uk">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Кав’ярня «Пауза» у Львові — кава та випічка</title>
+ <meta name="description" content="Кав’ярня «Пауза» у Львові: капучино, свіжа випічка та час для себе. Переглянь меню й ціни, обери улюблений напій та дізнайся, як замовити каву із собою.">
+ <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip" href="#main">Перейти до вмісту</a>
+<header class="header"><div class="container header__inner">
+ <a class="logo" href="#top" aria-label="Пауза — на початок сторінки"><img class="logo__image" src="img/logo.svg" alt="Пауза" width="344" height="106"></a>
+ <nav class="desktop-nav" aria-label="Головна навігація"><ul class="menu">
+  <li><a href="#menu">Меню</a></li><li><a href="#about">Про нас</a></li><li><a href="#order">Як замовити</a></li><li><a href="#contacts">Контакти</a></li>
+ </ul></nav>
+ <!-- Checkbox доступний через Tab і Space. Меню працює без JavaScript. -->
+<input class="nav-toggle sr-only" type="checkbox" id="nav-toggle" aria-label="Показати або сховати меню" aria-controls="mobile-nav" autocomplete="off">
+<label class="burger" for="nav-toggle" aria-hidden="true"><span class="burger__line"></span></label>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація">
+ <!-- Нативна GET-навігація перезавантажує той самий файл і скидає checkbox.
+      Так меню закривається після вибору без скриптів.
+      Для повторного переходу до того самого розділу CSS :has(:target) вибирає
+      другий якір і значення section. Вміст розділу не дублюється. -->
+ <form class="mobile-menu" method="get" action="index.html">
+  <button class="nav-choice nav-choice--base" data-section="menu" type="submit" name="section" value="menu" formaction="index.html#menu">Меню</button>
+  <button class="nav-choice nav-choice--again" data-section="menu" type="submit" name="section" value="menu-again" formaction="index.html#menu-again">Меню</button>
+  <button class="nav-choice nav-choice--base" data-section="about" type="submit" name="section" value="about" formaction="index.html#about">Про нас</button>
+  <button class="nav-choice nav-choice--again" data-section="about" type="submit" name="section" value="about-again" formaction="index.html#about-again">Про нас</button>
+  <button class="nav-choice nav-choice--base" data-section="order" type="submit" name="section" value="order" formaction="index.html#order">Як замовити</button>
+  <button class="nav-choice nav-choice--again" data-section="order" type="submit" name="section" value="order-again" formaction="index.html#order-again">Як замовити</button>
+  <button class="nav-choice nav-choice--base" data-section="contacts" type="submit" name="section" value="contacts" formaction="index.html#contacts">Контакти</button>
+  <button class="nav-choice nav-choice--again" data-section="contacts" type="submit" name="section" value="contacts-again" formaction="index.html#contacts-again">Контакти</button>
+ </form>
+</nav>
+</div></header>
+<main id="main" tabindex="-1">
+ <section class="hero section" aria-labelledby="hero-title"><div class="container hero__inner">
+  <div class="hero__copy stack"><p class="eyebrow">Кав’ярня у Львові</p>
+   <h1 id="hero-title">Твій день.<br>Твоя кава.<br>Твоя пауза.</h1>
+   <p>Еспресо, тепла випічка й трохи часу для себе. Завітай на ранкову каву або забери улюблений напій із собою.</p>
+   <a class="btn" href="#menu">Переглянути меню</a><p class="hero__hours">Щодня 08:00–20:00 · Львів</p>
+  </div>
+  <picture class="hero__photo"><source srcset="img/coffee-cups.webp" type="image/webp"><img src="img/coffee-cups.jpg" alt="Друзі тримають горнятка кави над столом" width="1200" height="800" fetchpriority="high"></picture>
+ </div></section>
+ <section class="benefits section" aria-labelledby="benefits-title"><div class="container">
+  <h2 class="sr-only" id="benefits-title">Чому варто зробити паузу</h2><ul class="benefits__list">
+   <li class="benefit"><p class="benefit__number">01</p><h3>Кава під твій смак</h3><p>Від насиченого еспресо до ніжного лате.</p></li>
+   <li class="benefit"><p class="benefit__number">02</p><h3>Випічка до горнятка</h3><p>Круасан або десерт для маленької перерви.</p></li>
+   <li class="benefit"><p class="benefit__number">03</p><h3>Зручно із собою</h3><p>Замовляй біля стійки та продовжуй свій день.</p></li>
+  </ul>
+ </div></section>
+ <section class="section" id="menu" tabindex="-1" aria-labelledby="menu-title"><span class="nav-anchor" id="menu-again" tabindex="-1"></span><div class="container">
+  <div class="section__heading"><p class="eyebrow">Що приготувати для тебе</p><h2 id="menu-title">Знайди свою улюблену пару</h2></div>
+  <div class="cards"><article class="card"><div class="card__picture"><picture><source srcset="img/coffee-cups.webp" type="image/webp"><img class="" src="img/coffee-cups.jpg" alt="Горнятка кави з молочною пінкою" width="1200" height="800" loading="lazy" decoding="async"></picture></div><h3>Капучино</h3><p class="card__text">Еспресо та молочна пінка · 250 мл</p><p class="card__price">75 ₴</p></article>
+<article class="card"><div class="card__picture"><picture><source srcset="img/butter-croissant.webp" type="image/webp"><img class="" src="img/butter-croissant.jpg" alt="Золотаві круасани з хрусткою скоринкою" width="800" height="640" loading="lazy" decoding="async"></picture></div><h3>Круасан</h3><p class="card__text">Масляний, із хрусткою скоринкою · 70 г</p><p class="card__price">65 ₴</p></article>
+<article class="card"><div class="card__picture"><picture><source srcset="img/butter-croissant.webp" type="image/webp"><img class="" src="img/butter-croissant.jpg" alt="Золотаві круасани з хрусткою скоринкою" width="800" height="640" loading="lazy" decoding="async"></picture></div><h3>Кава та круасан</h3><p class="card__text">Капучино 250 мл + круасан 70 г</p><p class="card__price">130 ₴</p></article>
+</div><p class="menu-note">Рослинне молоко +15 ₴. Ціни наведено для навчального проєкту.</p>
+ </div></section>
+ <section class="section" id="about" tabindex="-1" aria-labelledby="about-title"><span class="nav-anchor" id="about-again" tabindex="-1"></span><div class="container about__inner">
+  <picture class="about__photo"><source srcset="img/cafe-interior.webp" type="image/webp"><img src="img/cafe-interior.jpg" alt="Інтер’єр кав’ярні з лампами та написом CAFE" width="1200" height="793" loading="lazy" decoding="async"></picture>
+  <div class="about__copy stack"><p class="eyebrow">Місце для твоєї паузи</p><h2 id="about-title">Сповільнись на одне горнятко</h2>
+   <p>«Пауза» — концепція невеликої міської кав’ярні. Тут можна почати ранок із кави, зустрітися з другом або зробити коротку перерву між справами.</p>
+   <p>Обирай звичний смак або попроси поради біля стійки. У нашому меню — зрозумілі напої та випічка без довгого очікування.</p>
+  </div>
+ </div></section>
+ <section class="promo" aria-labelledby="promo-title">
+ <div class="container media__inner">
+  <p class="eyebrow">Трохи часу для себе</p>
+  <h2 id="promo-title">Місто може зачекати</h2>
+  <p>Обери напій, знайди затишне місце й дозволь собі коротку паузу. Кава та розмова — іноді цього достатньо.</p>
+  <a class="btn" href="#menu">Обрати свою каву</a>
+ </div>
+</section>
+<section class="video-story" aria-labelledby="video-title">
+ <video class="video-story__media" poster="img/coffee-barista-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Бариста готує каву біля еспресо-машини">
+  <source src="video/coffee-barista.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference)">
+  Ваш браузер не підтримує відео. На фоні залишається кадр із кав’ярні.
+ </video>
+ <div class="container media__inner">
+  <p class="eyebrow">Від зерна до горнятка</p>
+  <h2 id="video-title">Маленький щоденний ритуал</h2>
+  <p>Бариста готує напій, а ти обираєш, якою буде твоя наступна перерва. Улюблений смак — у кожному горнятку.</p>
+  <a class="btn" href="#contacts">Завітати на каву</a>
+ </div>
+ <p class="video-story__caption">Фонове відео можна призупинити внизу секції.</p>
+</section>
+ <section class="section" id="order" tabindex="-1" aria-labelledby="order-title"><span class="nav-anchor" id="order-again" tabindex="-1"></span><div class="container">
+  <div class="section__heading"><p class="eyebrow">Три прості кроки</p><h2 id="order-title">Кава без зайвого клопоту</h2></div>
+  <ol class="steps"><li class="step"><p class="step__number">01</p><h3>Обери</h3><p>Знайди напій і випічку в меню.</p></li>
+   <li class="step"><p class="step__number">02</p><h3>Замов</h3><p>Скажи баристі свій вибір та обсяг.</p></li>
+   <li class="step"><p class="step__number">03</p><h3>Забери</h3><p>Залишайся в залі або бери із собою.</p></li></ol>
+ </div></section>
+ <section class="section faq" aria-labelledby="faq-title"><div class="container">
+  <div class="section__heading"><p class="eyebrow">Перед візитом</p><h2 id="faq-title">Добре знати</h2></div>
+  <div class="faq__items"><article class="faq__item"><h3>Чи можна взяти каву із собою?</h3><p>Так. Усі напої можна замовити у стакані із собою.</p></article>
+   <article class="faq__item"><h3>Чи є рослинне молоко?</h3><p>Так. Додай рослинне молоко до напою за 15 ₴.</p></article>
+   <article class="faq__item"><h3>Як працює замовлення?</h3><p>Обери напій на сайті та замов його біля стійки в кав’ярні.</p></article></div>
+ </div></section>
+</main>
+<footer class="footer section" id="contacts" tabindex="-1" aria-labelledby="contacts-title"><span class="nav-anchor" id="contacts-again" tabindex="-1"></span><div class="container footer__inner">
+ <div class="footer__copy stack"><p class="eyebrow">Зроби паузу</p><h2 id="contacts-title">Зустрінемось за кавою</h2>
+  <address class="footer__contact">Львів · навчальна концепція кав’ярні<br>Щодня 08:00–20:00<br><a href="mailto:hello@pauza.example">hello@pauza.example</a></address>
+  <a class="btn" href="#menu">Обрати напій у меню</a><p class="footer__legal">пауза. © 2026 · Навчальний проєкт. Адреса закладу уточнюється.</p>
+ </div>
+ <div class="footer__aside">
+  <form class="feedback" action="feedback.html" method="get"><label class="sr-only" for="feedback-text">Ваш відгук</label><textarea id="feedback-text" name="feedback" placeholder="Напишіть свій відгук…" required maxlength="1000" autocomplete="off"></textarea><button class="btn" type="submit">Відправити фідбек</button><p class="feedback__note">Навчальна форма: відгук нікуди не надсилається.</p></form>
+  <nav class="social" aria-label="Соціальні платформи"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram — головна сторінка сервісу"><img src="img/instagram.svg" alt="" width="40" height="40" loading="lazy"></a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook — головна сторінка сервісу"><img src="img/facebook.svg" alt="" width="40" height="40" loading="lazy"></a><a href="https://telegram.org/" target="_blank" rel="noopener noreferrer" aria-label="Telegram — головна сторінка сервісу"><img src="img/telegram.svg" alt="" width="40" height="40" loading="lazy"></a></nav>
+ </div>
+</div></footer>
+</body>
+</html>
